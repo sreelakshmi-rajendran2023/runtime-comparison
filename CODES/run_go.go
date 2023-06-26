@@ -19,7 +19,7 @@ func createDict(dictSize int) map[string]int {
 
 func searchDict(key string, testDict map[string]int) int64 {
 	startTime := time.Now().UnixNano()
-	_ = testDict[key] // Ignoring the result for now
+	_ = testDict[key]
 	endTime := time.Now().UnixNano()
 	searchTime := endTime - startTime
 	return searchTime
