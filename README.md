@@ -28,7 +28,7 @@ GO:
 
 ## How to Run
 
-1. Download the code files from the [Python Code](./codes/runpy.py) and [Go Code](./codes/rungo.go) links.
+1. Download the code files from the  [Python Code](CODES/run_py.py) and [Go Code](CODES/run_go.go) links.
 2. Open your terminal or command prompt.
 3. For Python versions up to 3, use the following command:
     ```
@@ -44,4 +44,4 @@ GO:
     ```
    Make sure you have Go installed and properly configured on your system.
 
-Please note that the commands mentioned above assume that you are running them from the same directory where the code files are located if not move to that directory using 'cd' command/
+Please note that the commands mentioned above assume that you are running them from the same directory where the code files are located if not move to that directory using 'cd' command.
