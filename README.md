@@ -21,9 +21,13 @@ PYTHON:
 
 GO:
 
+using go run run_go.go: 
 
 <img width="435" alt="image" src="https://github.com/sreelakshmi-rajendran2023/runtime-comparison/assets/134548991/d56881fd-0697-4cf6-a8ef-4cacb4447891">
 
+using build go command:
+
+<img width="446" alt="image" src="https://github.com/sreelakshmi-rajendran2023/runtime-comparison/assets/134548991/2ebb5e49-e144-4012-af5c-8a5a3fbc220d">
 
 
 ## How to Run
@@ -39,6 +43,12 @@ GO:
     python3 run_py.py
     ```
 4. For Go, use the following command:
+   go to the directory where your go file is saved using 'cd' command
+   ```
+   go build run_go.go
+   ./run_go
+   ```
+
     ```
     go run run_go.go
     ```
