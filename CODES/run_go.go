@@ -47,8 +47,8 @@ func main() {
 				_ = testDict[randomKey]
 			}
 			endTime := time.Now()
-			searchTime := endTime.Sub(startTime)
-			fmt.Printf("Search time = %.2f \n", (searchTime.Seconds() * 1000))
+			totalTime := endTime.Sub(startTime)
+			fmt.Printf("Search time for %d searches: %.2f ms\n", searchTime, totalTime.Seconds()*1000)
 		}
 	}
 }
