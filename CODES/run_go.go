@@ -17,13 +17,9 @@ func createDict(dictSize int) map[string]int {
 	return testDict
 }
 
-func searchDict(key string, testDict map[string]int) int64 {
-	startTime := time.Now().UnixNano()
+/*func searchDict(key string, testDict map[string]int) int64 {
 	_ = testDict[key]
-	endTime := time.Now().UnixNano()
-	searchTime := endTime - startTime
-	return searchTime
-}
+}*/
 
 /*func displayKeyNames(testDict map[string]int) {
 	for key := range testDict {
@@ -33,20 +29,27 @@ func searchDict(key string, testDict map[string]int) int64 {
 
 func main() {
 	dictSize := 1000
-	searchTimes := []int{50, 500, 5000}
+	searchTimes := []int{50, 500, 5000, 50000 }
 
 	testDict := createDict(dictSize)
 	//displayKeyNames(testDict)
 
-	for _, searchTime := range searchTimes {
-		totalTime := int64(0)
-		for i := 0; i < searchTime; i++ {
-			randomKey := getRandomKey(testDict)
-			timeTaken := searchDict(randomKey, testDict)
-			totalTime += timeTaken
+	for i :=0; i< 5; i++ {
+		fmt.Printf("--------\n")
+	
+		for _, searchTime := range searchTimes {
+			//totalTime := int64(0)
+			startTime := time.Now()
+
+			for i := 0; i < searchTime; i++ {
+				randomKey := getRandomKey(testDict)
+				//timeTaken := searchDict(randomKey, testDict)
+				_ = testDict[randomKey]
+			}
+			endTime := time.Now()
+			searchTime := endTime.Sub(startTime)
+			fmt.Printf("Search time = %.2f \n", (searchTime.Seconds() * 1000))
 		}
-		averageTime := float64(totalTime) / float64(searchTime)
-		fmt.Printf("\nAverage search time for %d searches: %.2f nanoseconds\n", searchTime, averageTime)
 	}
 }
 

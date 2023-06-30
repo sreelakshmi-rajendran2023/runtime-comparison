@@ -12,11 +12,9 @@ def create_dict(dict_size):
 
 
 def search_dict(key, test_dict):
-    start_time = time.time_ns()
     result = test_dict.get(key)
-    end_time = time.time_ns()
-    search_time = end_time - start_time 
-    return search_time
+
+    #return search_time
 
 def display_key_names(test_dict):
     key_names = list(test_dict.keys())
@@ -25,19 +23,23 @@ def display_key_names(test_dict):
 
 def main():
     dict_size = 1000
-    search_times = [50, 500, 5000]
+    search_times = [50, 500, 5000, 50000]
 
     test_dict = create_dict(dict_size)
     display_key_names(test_dict)
 
-    for search_time in search_times:
-        total_time = 0
-        for i in range(search_time):
-            random_key = random.choice(list(test_dict.keys()))
-            time_taken = search_dict(random_key, test_dict)
-            total_time += time_taken
-        average_time = total_time / search_time
-        print(f"\nAverage search time for {search_time} searches: {average_time:.2f} nanoseconds")
+    for x in range(5):
+        print("---------------------------")
+        for search_time in search_times:
+            start_time = time.time()
+            for i in range(search_time):
+                random_key = random.choice(list(test_dict.keys()))
+                #time_taken = search_dict(random_key, test_dict)
+                result = test_dict.get(random_key)
+                #total_time += time_taken
+            end_time = time.time()
+            search_time = end_time - start_time             
+            print(f"Search time = { round(search_time * 1000, 1)} ")
 
 if __name__ == '__main__':
     main()
