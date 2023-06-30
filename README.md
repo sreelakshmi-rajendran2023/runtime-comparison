@@ -6,7 +6,7 @@ This repository compares the efficiency and run-time performance of Go and Pytho
 
 - [Python Code](CODES/run_py.py): Contains the Python code used for the comparison.
 - [Go Code](CODES/run_go.go): Contains the Go code used for the comparison.
-- [Java Code](CODES/run_go.go): Contains the Java code used for the comparison.
+- [Java Code](CODES/run_jv.java): Contains the Java code used for the comparison.
 
 ## Efficiency Comparison
 
