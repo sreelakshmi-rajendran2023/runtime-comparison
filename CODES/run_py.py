@@ -38,8 +38,8 @@ def main():
                 result = test_dict.get(random_key)
                 #total_time += time_taken
             end_time = time.time()
-            search_time = end_time - start_time             
-            print(f"Search time = { round(search_time * 1000, 1)} ")
+            total_time = end_time - start_time             
+            print(f"Search time for {search_time} searches:= { round(total_time * 1000, 1)} ")
 
 if __name__ == '__main__':
     main()
