@@ -6,6 +6,7 @@ This repository compares the efficiency and run-time performance of Go and Pytho
 
 - [Python Code](CODES/run_py.py): Contains the Python code used for the comparison.
 - [Go Code](CODES/run_go.go): Contains the Go code used for the comparison.
+- [Java Code](CODES/run_go.go): Contains the Java code used for the comparison.
 
 ## Efficiency Comparison
 
@@ -17,17 +18,19 @@ To measure the run-time performance, the code was executed multiple times, and t
 
 PYTHON:
 
-<img width="439" alt="image" src="https://github.com/sreelakshmi-rajendran2023/runtime-comparison/assets/134548991/ecf089be-05b8-4f04-8376-24247036898f">
+<img width="501" alt="image" src="https://github.com/sreelakshmi-rajendran2023/runtime-comparison/assets/134548991/28686c3a-b795-4c98-8515-1e89fd24eb7f">
+
 
 GO:
 
-using go run run_go.go: 
+<img width="595" alt="image" src="https://github.com/sreelakshmi-rajendran2023/runtime-comparison/assets/134548991/924be74c-e1d5-4324-b551-55290cb34fc4">
 
-<img width="435" alt="image" src="https://github.com/sreelakshmi-rajendran2023/runtime-comparison/assets/134548991/d56881fd-0697-4cf6-a8ef-4cacb4447891">
 
-using build go command:
+JAVA:
 
-<img width="446" alt="image" src="https://github.com/sreelakshmi-rajendran2023/runtime-comparison/assets/134548991/2ebb5e49-e144-4012-af5c-8a5a3fbc220d">
+<img width="385" alt="image" src="https://github.com/sreelakshmi-rajendran2023/runtime-comparison/assets/134548991/6bacae2d-7422-427a-ac9d-a0188c5c6bb0">
+
+
 
 
 ## How to Run
@@ -48,10 +51,14 @@ using build go command:
    go build run_go.go
    ./run_go
    ```
-
-    ```
-    go run run_go.go
-    ```
    Make sure you have Go installed and properly configured on your system.
+
+  6. For Java, use the following command:
+     go to the directory where your go file is saved using 'cd' command
+     ```
+     javac run_java.java
+     java run_java.java
+     ```
+
 
 Please note that the commands mentioned above assume that you are running them from the same directory where the code files are located if not move to that directory using 'cd' command.
